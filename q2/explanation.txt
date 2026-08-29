@@ -1,0 +1,18 @@
+Explanation of Positioning Used
+===============================
+
+This profile card uses relative positioning and absolute positioning. The two techniques work together to place the badge and the decorative icon.
+
+1. Relative Positioning
+------------------------
+We applied position: relative to the main card container (#card-container) and to the image wrapper (.image-wrapper).Relative positioning keeps an element in the normal document flow. It also creates a positioning context. An absolutely positioned child measures its coordinates (top, right, bottom, left) from the nearest positioned ancestor.Without relative positioning on the parent, the absolutely positioned children anchor to the browser viewport instead of to the card.
+
+2. Absolute Positioning
+------------------------
+We applied position: absolute to two elements. Absolute positioning removes an element from the normal document flow. It places the element at exact coordinates within the nearest positioned ancestor.
+
+The badge (.badge, "Pro Member") uses top: 15px and right: 15px. Because its parent (#card-container) is relatively positioned, the badge appears at the top-right corner of the card. The decorative icon (.decorative-icon) uses bottom: 5px and left: 0. Because its parent (.image-wrapper) is relatively positioned, the icon overlaps the bottom-left corner of the profile image.
+
+3. Summary
+----------
+Relative positioning defines a reference point for child elements. Absolute positioning places an element at exact coordinates relative to that reference point. The card container defines the reference for the badge. The image wrapper defines the reference for the decorative icon. This method keeps the badge and the icon fixed to the card and the image, rather than to the page.
