@@ -184,7 +184,7 @@ footer {
     height: 31px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     header.top-bar {
         flex-direction: column;
         gap: 0.5rem;
@@ -194,14 +194,45 @@ footer {
     .top-bar nav {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 1rem;
+        gap: 0.75rem;
+    }
+
+    .top-bar nav a {
+        font-size: 1rem;
     }
 
     main {
-        padding: 1rem;
+        max-width: 90%;
+        padding: 0.75rem;
+    }
+
+    .section-item {
+        padding: 0.5rem;
     }
 
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    .date-row {
+        flex-wrap: wrap;
+        gap: 0.35rem;
+    }
+
+    .links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.35rem 0.5rem;
+    }
+
+    .footer-links a {
+        margin: 0;
+        font-size: 0.9rem;
     }
 }
